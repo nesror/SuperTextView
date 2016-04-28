@@ -13,7 +13,10 @@ import android.view.MenuItem;
 import android.view.View;
 
 import cn.yzapp.supertextview.SuperTextView;
-
+/**
+ * @author: nestor
+ * email: nestor@yzapp.cn
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override

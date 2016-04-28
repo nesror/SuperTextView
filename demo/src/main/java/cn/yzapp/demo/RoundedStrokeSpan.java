@@ -9,7 +9,10 @@ import android.os.Build;
 import android.support.annotation.ColorRes;
 import android.text.style.ReplacementSpan;
 
-
+/**
+ * @author: nestor
+ * email: nestor@yzapp.cn
+ */
 public class RoundedStrokeSpan extends ReplacementSpan {
     private int mCornerRadius = 8;
     private int mStrokeColor = 0;

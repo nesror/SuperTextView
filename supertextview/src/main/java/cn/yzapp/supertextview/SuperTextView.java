@@ -23,7 +23,10 @@ import android.text.style.URLSpan;
 import android.text.style.UnderlineSpan;
 import android.util.AttributeSet;
 import android.widget.TextView;
-
+/**
+ * @author: nestor
+ * email: nestor@yzapp.cn
+ */
 public class SuperTextView extends TextView {
     private SpannableString mSpannableString;
     private int length;
