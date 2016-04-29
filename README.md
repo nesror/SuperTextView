@@ -1,5 +1,29 @@
 # SuperTextView
+========
 单个textview支持多种字体样式，支持插入图片
+
+<img src="img\img_1.png" />
+
+Add NumChooseView to your project
+----------------------------
+Gradle:
+```
+   compile 'cn.yzapp.supertextview:supertextview:[look download]@aar'
+```
+
+Maven:
+```
+<dependency>
+  <groupId>cn.yzapp.supertextview</groupId>
+  <artifactId>supertextview</artifactId>
+  <version>[look download]</version>
+  <type>aar</type>
+</dependency>
+```
+[ ![Download](https://api.bintray.com/packages/nesror/maven/supertextview/images/download.svg) ](https://bintray.com/artifact/download/nesror/maven/cn/yzapp/supertextview/supertextview/0.0.2/supertextview-0.0.2.aar)
+
+Use
+----------------------------
 ~~~~{java}
 RoundedStrokeSpan strokeSpan = new RoundedStrokeSpan(this, R.color.colorAccent, R.color.colorPrimary);
 strokeSpan.setPadding(8, -8, 10, 18);
