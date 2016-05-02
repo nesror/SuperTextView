@@ -4,7 +4,7 @@
 
 <img src="img\img_1.png" />
 
-Add NumChooseView to your project
+Add SuperTextView to your project
 ----------------------------
 Gradle:
 ```
@@ -20,7 +20,7 @@ Maven:
   <type>aar</type>
 </dependency>
 ```
-[ ![Download](https://api.bintray.com/packages/nesror/maven/supertextview/images/download.svg) ](https://bintray.com/artifact/download/nesror/maven/cn/yzapp/supertextview/supertextview/0.0.2/supertextview-0.0.2.aar)
+[ ![Download](https://api.bintray.com/packages/nesror/maven/SuperTextView/images/download.svg) ](https://bintray.com/artifact/download/nesror/maven/cn/yzapp/supertextview/supertextview/0.0.2/supertextview-0.0.2.aar)
 
 Use
 ----------------------------
