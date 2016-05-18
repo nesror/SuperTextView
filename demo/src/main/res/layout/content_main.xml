@@ -18,4 +18,13 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:text="Hello World!" />
+
+    <cn.yzapp.supertextview.SuperTextView
+        android:id="@+id/textview2"
+        android:layout_below="@+id/textview"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Hello World!" />
 </RelativeLayout>

@@ -49,6 +49,14 @@ public class SuperTextView extends TextView {
     }
 
     /**
+     * 清空文本
+     */
+    public void clear() {
+        setText(null);
+        length = 0;
+    }
+
+    /**
      * 设置文本
      * @return SuperTextView
      */
