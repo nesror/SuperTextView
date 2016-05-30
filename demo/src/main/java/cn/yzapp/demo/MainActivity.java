@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 .setFontStyle(Typeface.BOLD_ITALIC)
                 .setFontColor(getResources().getColor(R.color.colorPrimary))
                 .add()
-                .text("和我签订契约，成为魔法少女吧")
+                .text("和我签订契约，成为魔法少女吧！")
                 .setFontColor(getResources().getColor(R.color.colorAccent))
                 .add();
     }
