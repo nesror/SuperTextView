@@ -6,22 +6,22 @@
 
 Add SuperTextView to your project
 ----------------------------
-Gradle:
+Step 1. Add the JitPack repository to your build file
+```
+	maven { url "https://www.jitpack.io" }
+```
+
+Step 2. Add the dependency
+```
+	compile 'com.github.nesror:SuperTextView:[look download]'
+```
+[![](https://www.jitpack.io/v/nesror/SuperTextView.svg)](https://www.jitpack.io/#nesror/SuperTextView)
+
+* 新版本已经使用jitpack.io，以下是旧版本：
+* Gradle:
 ```
    compile 'cn.yzapp.supertextview:supertextview:[look download]@aar'
 ```
-
-Maven:
-```
-<dependency>
-  <groupId>cn.yzapp.supertextview</groupId>
-  <artifactId>supertextview</artifactId>
-  <version>[look download]</version>
-  <type>aar</type>
-</dependency>
-```
-[ ![Download](https://api.bintray.com/packages/nesror/maven/SuperTextView/images/download.svg) ](https://bintray.com/artifact/download/nesror/maven/cn/yzapp/supertextview/supertextview/0.0.2/supertextview-0.0.2.aar)
-
 Use
 ----------------------------
 ~~~~{java}

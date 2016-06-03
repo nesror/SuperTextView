@@ -25,5 +25,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:design:23.3.0'
     compile 'joda-time:joda-time:2.8.2'
-    compile project(':supertextview')
+    //compile project(':supertextview')
+    compile 'com.github.nesror:SuperTextView:v0.0.3'
 }
