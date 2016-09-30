@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-//apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.jfrog.bintray'
 
 version = "0.0.3"
 
@@ -11,7 +11,7 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 24
-        versionCode 2
+        versionCode 3
         versionName version
     }
     buildTypes {
@@ -26,21 +26,21 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.0'
 }
 
-/*
 def siteUrl = 'https://github.com/nesror/SuperTextView' // 项目的主页
 def gitUrl = 'https://github.com/nesror/SuperTextView.git' // Git仓库的url
 group = "cn.yzapp.supertextview" // jfrog
+//group = "com.github.nesror" // jitpack.io
 
 install {
     repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
+        // POM.xml配置
         pom {
             project {
                 packaging 'aar'
-                // Add your description here
-                name 'Android number choose view' //项目描述
+                //项目描述
+                name 'Android number choose view'
                 url siteUrl
-                // Set your license
+                // license
                 licenses {
                     license {
                         name 'The Apache Software License, Version 2.0'
@@ -82,6 +82,7 @@ artifacts {
     archives javadocJar
     archives sourcesJar
 }
+
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 bintray {
@@ -96,4 +97,4 @@ bintray {
         licenses = ["Apache-2.0"]
         publish = true
     }
-}*/
+}
