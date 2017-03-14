@@ -2,11 +2,11 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-version = "0.0.3"
+version = "1.0.0"
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    buildToolsVersion "25.0.2"
 
     defaultConfig {
         minSdkVersion 14
@@ -23,7 +23,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:appcompat-v7:25.2.0'
 }
 
 def siteUrl = 'https://github.com/nesror/SuperTextView' // 项目的主页

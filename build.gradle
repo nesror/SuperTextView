@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:2.3.0'
         // 自动化maven打包插件
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
         // 上传至Bintray平台插件

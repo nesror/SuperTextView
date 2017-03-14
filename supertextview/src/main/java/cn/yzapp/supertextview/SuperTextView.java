@@ -1,9 +1,7 @@
 package cn.yzapp.supertextview;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.support.annotation.ColorInt;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -22,12 +20,12 @@ import android.text.style.SuperscriptSpan;
 import android.text.style.URLSpan;
 import android.text.style.UnderlineSpan;
 import android.util.AttributeSet;
-import android.widget.TextView;
+
 /**
  * @author: nestor
  * email: nestor@yzapp.cn
  */
-public class SuperTextView extends TextView {
+public class SuperTextView extends android.support.v7.widget.AppCompatTextView {
     private SpannableString mSpannableString;
     private int length;
 
@@ -43,11 +41,6 @@ public class SuperTextView extends TextView {
         super(context, attrs, defStyleAttr);
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public SuperTextView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
-
     /**
      * 清空文本
      */
@@ -58,9 +51,10 @@ public class SuperTextView extends TextView {
 
     /**
      * 设置文本
+     *
      * @return SuperTextView
      */
-    public SuperTextView text(String text) {
+    public SuperTextView text(CharSequence text) {
         mSpannableString = new SpannableString(text);
         length = text.length();
         return this;
@@ -68,6 +62,7 @@ public class SuperTextView extends TextView {
 
     /**
      * 设置自定义样式
+     *
      * @return SuperTextView
      */
     public SuperTextView setSpan(CharacterStyle span) {
@@ -77,6 +72,7 @@ public class SuperTextView extends TextView {
 
     /**
      * 设置字体颜色
+     *
      * @return SuperTextView
      */
     public SuperTextView setFontColor(@ColorInt int color) {
@@ -86,6 +82,7 @@ public class SuperTextView extends TextView {
 
     /**
      * 设置背景颜色
+     *
      * @return SuperTextView
      */
     public SuperTextView setBackColor(@ColorInt int color) {
@@ -95,6 +92,7 @@ public class SuperTextView extends TextView {
 
     /**
      * 设置字体大小
+     *
      * @return SuperTextView
      */
     public SuperTextView setFontSize(int size) {
@@ -104,6 +102,7 @@ public class SuperTextView extends TextView {
 
     /**
      * 设置字体相对大小
+     *
      * @return SuperTextView
      */
     public SuperTextView setFontRelativeSize(float relativeSize) {
@@ -113,6 +112,7 @@ public class SuperTextView extends TextView {
 
     /**
      * 设置正常，粗体，斜体，粗斜体
+     *
      * @param typeface android.graphics.Typeface.NORMAL\BOLD\ITALIC\BOLD_ITALIC
      * @return SuperTextView
      */
@@ -123,6 +123,7 @@ public class SuperTextView extends TextView {
 
     /**
      * 下划线
+     *
      * @return SuperTextView
      */
     public SuperTextView setFontUnderLine() {
@@ -132,6 +133,7 @@ public class SuperTextView extends TextView {
 
     /**
      * 删除线
+     *
      * @return SuperTextView
      */
     public SuperTextView setFontStrike() {
@@ -141,6 +143,7 @@ public class SuperTextView extends TextView {
 
     /**
      * 上标
+     *
      * @return SuperTextView
      */
     public SuperTextView setFontSubscript() {
@@ -150,6 +153,7 @@ public class SuperTextView extends TextView {
 
     /**
      * 下标
+     *
      * @return SuperTextView
      */
     public SuperTextView setFontSuperscript() {
@@ -159,12 +163,13 @@ public class SuperTextView extends TextView {
 
     /**
      * 超级链接
-     * @param url  tel:电话;
-     *             mailto:邮件;
-     *             http://网址;
-     *             sms:短信 或者smsto;
-     *             mms:彩信 或者mmsto;
-     *             geo:地图（geo:38.899533,-77.036476）
+     *
+     * @param url tel:电话;
+     *            mailto:邮件;
+     *            http://网址;
+     *            sms:短信 或者smsto;
+     *            mms:彩信 或者mmsto;
+     *            geo:地图（geo:38.899533,-77.036476）
      * @return SuperTextView
      */
     public SuperTextView setUrl(String url) {
@@ -175,6 +180,7 @@ public class SuperTextView extends TextView {
 
     /**
      * 添加设置好字体样式的文本
+     *
      * @return SuperTextView
      */
     public SuperTextView add() {
@@ -184,11 +190,12 @@ public class SuperTextView extends TextView {
 
     /**
      * 直接增加的方法
-     * @param text 文字
+     *
+     * @param text  文字
      * @param spans 文本样式们
      * @return SuperTextView
      */
-    public SuperTextView addText(String text,CharacterStyle... spans) {
+    public SuperTextView addText(CharSequence text, CharacterStyle... spans) {
         SpannableString spannableString = new SpannableString(text);
         for (CharacterStyle span : spans) {
             spannableString.setSpan(span, 0, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -199,6 +206,7 @@ public class SuperTextView extends TextView {
 
     /**
      * 添加图片，更多图片样式请使用setSpan方法
+     *
      * @param d Drawable
      * @return SuperTextView
      */
