@@ -10,10 +10,8 @@ import android.support.annotation.NonNull;
 import android.text.style.ReplacementSpan;
 
 /**
- * @author: GuSiheng
- * @time: 4/8 008-15:25.
- * @email: gusiheng@qccr.com
- * @desc: textview的背景
+ * @author: nestor
+ * email: nestor@yzapp.cn
  */
 public class RoundedBackgroundSpan extends ReplacementSpan {
     private int mCornerRadius = 5;
