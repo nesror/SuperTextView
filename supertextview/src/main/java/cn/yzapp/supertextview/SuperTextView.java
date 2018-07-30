@@ -43,12 +43,6 @@ public class SuperTextView extends android.support.v7.widget.AppCompatTextView {
         super(context, attrs, defStyleAttr);
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public SuperTextView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
-
-
     /**
      * 清空文本
      */
