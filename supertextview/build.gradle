@@ -1,16 +1,14 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
+//apply plugin: 'com.jfrog.bintray'
 
 version = "1.0.0"
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
-
+    compileSdkVersion 26
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 3
         versionName version
     }
@@ -20,81 +18,83 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+    }
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
 }
 
-def siteUrl = 'https://github.com/nesror/SuperTextView' // 项目的主页
-def gitUrl = 'https://github.com/nesror/SuperTextView.git' // Git仓库的url
-group = "cn.yzapp.supertextview" // jfrog
-//group = "com.github.nesror" // jitpack.io
-
-install {
-    repositories.mavenInstaller {
-        // POM.xml配置
-        pom {
-            project {
-                packaging 'aar'
-                //项目描述
-                name 'Android number choose view'
-                url siteUrl
-                // license
-                licenses {
-                    license {
-                        name 'The Apache Software License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-                developers {
-                    developer {
-                        id 'nestor'    //填写的一些基本信息
-                        name 'nestor'
-                        email 'nestor@yzapp.cn'
-                    }
-                }
-                scm {
-                    connection gitUrl
-                    developerConnection gitUrl
-                    url siteUrl
-                }
-            }
-        }
-    }
-}
-
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-
-task javadoc(type: Javadoc) {
-    options.encoding = "utf-8"
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-artifacts {
-    archives javadocJar
-    archives sourcesJar
-}
-
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
-    configurations = ['archives']
-    pkg {
-        repo = "maven"
-        name = "SuperTextView"    //发布到JCenter上的项目名字
-        websiteUrl = siteUrl
-        vcsUrl = gitUrl
-        licenses = ["Apache-2.0"]
-        publish = true
-    }
-}
+//def siteUrl = 'https://github.com/nesror/SuperTextView' // 项目的主页
+//def gitUrl = 'https://github.com/nesror/SuperTextView.git' // Git仓库的url
+//group = "cn.yzapp.supertextview" // jfrog
+group = "com.github.nesror" // jitpack.io
+//
+//install {
+//    repositories.mavenInstaller {
+//        // POM.xml配置
+//        pom {
+//            project {
+//                packaging 'aar'
+//                //项目描述
+//                name 'Android number choose view'
+//                url siteUrl
+//                // license
+//                licenses {
+//                    license {
+//                        name 'The Apache Software License, Version 2.0'
+//                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                    }
+//                }
+//                developers {
+//                    developer {
+//                        id 'nestor'    //填写的一些基本信息
+//                        name 'nestor'
+//                        email 'nestor@yzapp.cn'
+//                    }
+//                }
+//                scm {
+//                    connection gitUrl
+//                    developerConnection gitUrl
+//                    url siteUrl
+//                }
+//            }
+//        }
+//    }
+//}
+//
+//task sourcesJar(type: Jar) {
+//    from android.sourceSets.main.java.srcDirs
+//    classifier = 'sources'
+//}
+//
+//task javadoc(type: Javadoc) {
+//    options.encoding = "utf-8"
+//    source = android.sourceSets.main.java.srcDirs
+//    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+//}
+//task javadocJar(type: Jar, dependsOn: javadoc) {
+//    classifier = 'javadoc'
+//    from javadoc.destinationDir
+//}
+//artifacts {
+//    archives javadocJar
+//    archives sourcesJar
+//}
+//
+//Properties properties = new Properties()
+//properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//bintray {
+//    user = properties.getProperty("bintray.user")
+//    key = properties.getProperty("bintray.apikey")
+//    configurations = ['archives']
+//    pkg {
+//        repo = "maven"
+//        name = "SuperTextView"    //发布到JCenter上的项目名字
+//        websiteUrl = siteUrl
+//        vcsUrl = gitUrl
+//        licenses = ["Apache-2.0"]
+//        publish = true
+//    }
+//}
